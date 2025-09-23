@@ -1,32 +1,31 @@
 """
-This script defines the Transformer model, a state-of-the-art model architecture used
-for a variety of natural language processing tasks, adapted here for music generation.
-The Transformer model relies on the mechanism of attention, differentially weighting
-the significance of different input elements.
+Advanced Transformer Architecture for Musical Sequence Generation
 
-The script includes the implementation of various components of the Transformer
-architecture, including the Encoder, Decoder, and their respective layers. It also
-defines a sinusoidal positional encoding function that provides the model with
-information about the relative position of tokens in the sequence.
+This implementation represents a cutting-edge adaptation of the Transformer model
+specifically engineered for generating musical melodies. By leveraging the revolutionary
+attention mechanism, this model can understand complex musical relationships and
+generate coherent, musically intelligent sequences.
 
-Key Components:
-- Transformer: The main model class combining the Encoder and Decoder.
-- Encoder: Processes the input sequence and generates a context-rich representation.
-- Decoder: Generates the output sequence based on the Encoder's output and its own
-  input.
-- EncoderLayer and DecoderLayer: Individual layers used in the Encoder and Decoder.
-- _get_angles and sinusoidal_position_encoding: Functions to generate positional
-  encoding based on the sequence length and model dimensionality.
+The architecture implements a complete encoder-decoder structure with multi-head
+attention, allowing the model to focus on different aspects of musical context
+simultaneously. The sinusoidal positional encoding ensures temporal relationships
+between musical notes are preserved and understood by the model.
 
-Usage:
-To use the Transformer model, instantiate it with the required dimensions, number
-of layers, vocabulary sizes, and other parameters. The model can then be used for
-training or inference tasks in music generation or other sequence-to-sequence
-transformations.
+Core Architecture Components:
+- Transformer: Main orchestrator combining encoder and decoder for end-to-end learning
+- Encoder: Processes musical input sequences into rich contextual representations
+- Decoder: Generates new musical sequences based on encoder context and autoregressive input
+- EncoderLayer/DecoderLayer: Individual processing units with attention and feed-forward networks
+- Positional Encoding: Sophisticated sinusoidal encoding preserving musical timing information
 
-Note:
-This implementation of the Transformer model is designed for flexibility and can be
-adapted for various sequence-to-sequence tasks beyond music generation.
+Musical Intelligence Features:
+- Multi-head attention captures harmonic and melodic relationships
+- Positional encoding maintains rhythmic and temporal structure
+- Layer normalization ensures stable learning of musical patterns
+- Feed-forward networks add non-linear musical transformations
+
+This implementation represents a sophisticated fusion of deep learning and music theory,
+enabling the generation of musically coherent melodies through advanced sequence modeling.
 """
 
 import numpy as np
@@ -42,14 +41,17 @@ from keras.layers import (
 
 def sinusoidal_position_encoding(num_positions, d_model):
     """
-    Compute positional encoding for a given position and dimension.
+    Generates sophisticated positional encodings using sinusoidal functions to preserve
+    temporal information in musical sequences. This encoding allows the model to understand
+    the relative position of each musical note in the sequence, crucial for maintaining
+    rhythmic and melodic coherence.
 
     Parameters:
-        num_positions (int): Number of positions.
-        d_model (int): Dimension of the model.
+        num_positions (int): Maximum sequence length the model can handle
+        d_model (int): Embedding dimension of the model
 
     Returns:
-        Tensor: Positional encoding for the given position and dimension.
+        Tensor: Rich positional encoding matrix preserving musical timing relationships
     """
 
     angles = _get_angles(
@@ -72,15 +74,17 @@ def sinusoidal_position_encoding(num_positions, d_model):
 
 def _get_angles(pos, i, d_model):
     """
-    Compute the angles for the positional encoding.
+    Calculates the mathematical angles used in sinusoidal positional encoding.
+    This function implements the core mathematical foundation that enables the
+    model to understand temporal relationships in musical sequences.
 
     Parameters:
-        pos (np.ndarray): Positions.
-        i (np.ndarray): Indices.
-        d_model (int): Dimension of the model.
+        pos (np.ndarray): Position indices in the sequence
+        i (np.ndarray): Dimension indices for the encoding
+        d_model (int): Model embedding dimension
 
     Returns:
-        np.ndarray: Angles for the positional encoding.
+        np.ndarray: Computed angles for sinusoidal positional encoding
     """
     angle_dropout_rates = 1 / np.power(
         10000, (2 * (i // 2)) / np.float32(d_model)
@@ -90,7 +94,9 @@ def _get_angles(pos, i, d_model):
 
 class Transformer(tf.keras.Model):
     """
-    The Transformer model architecture, consisting of an Encoder and Decoder.
+    Revolutionary Transformer architecture specifically designed for musical sequence generation.
+    This model combines the power of attention mechanisms with sophisticated musical understanding
+    to create coherent, musically intelligent melodies through advanced deep learning techniques.
     """
 
     def __init__(

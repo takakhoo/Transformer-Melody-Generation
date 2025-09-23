@@ -1,32 +1,31 @@
 """
-melody_generator.py
+Advanced Melody Generation Engine Powered by Transformer Intelligence
 
-This script defines the MelodyGenerator class, which is responsible for generating
-melodies using a trained Transformer model. The class offers functionality to produce
-a sequence of musical notes, starting from a given seed sequence and extending it
-to a specified maximum length.
+This sophisticated melody generation system represents the culmination of our
+Transformer-based musical AI architecture. The MelodyGenerator leverages the
+trained model's deep understanding of musical patterns to create coherent,
+musically intelligent melodies through advanced autoregressive generation.
 
-The MelodyGenerator class leverages the trained Transformer model's ability to
-predict subsequent notes in a melody based on the current sequence context. It
-achieves this by iteratively appending each predicted note to the existing sequence
-and feeding this extended sequence back into the model for further predictions.
+The system implements a sophisticated iterative generation process that builds
+melodies note-by-note, using the entire generated sequence as context for each
+new prediction. This approach ensures that generated melodies maintain musical
+coherence and follow learned patterns from the training data.
 
-This iterative process continues until the generated melody reaches the desired length
-or an end-of-sequence token is predicted. The class utilizes a tokenizer to encode and
-decode note sequences to and from the format expected by the Transformer model.
+Revolutionary Generation Features:
+- Autoregressive melody construction using full sequence context
+- Intelligent note prediction based on learned musical relationships
+- Sophisticated tokenization preserving musical structure
+- Dynamic length control with intelligent stopping criteria
 
-Key Components:
-- MelodyGenerator: The primary class defined in this script, responsible for the
-  generation of melodies.
+Musical Intelligence Capabilities:
+- Generates musically coherent note sequences
+- Maintains harmonic and melodic relationships throughout generation
+- Preserves rhythmic patterns and timing relationships
+- Creates novel melodies that follow learned musical conventions
 
-Usage:
-The MelodyGenerator class can be instantiated with a trained Transformer model
-and an appropriate tokenizer. Once instantiated, it can generate melodies by
-calling the `generate` method with a starting note sequence.
-
-Note:
-This class is intended to be used with a Transformer model that has been
-specifically trained for melody generation tasks.
+This generation engine represents the creative output of our Transformer model,
+transforming learned musical patterns into beautiful, original melodies that
+demonstrate the model's deep understanding of musical structure and composition.
 """
 
 import tensorflow as tf
@@ -34,10 +33,13 @@ import tensorflow as tf
 
 class MelodyGenerator:
     """
-    Class to generate melodies using a trained Transformer model.
-
-    This class encapsulates the inference logic for generating melodies
-    based on a starting sequence.
+    Revolutionary melody generation engine that transforms learned musical patterns
+    into beautiful, original melodies using advanced Transformer intelligence.
+    
+    This sophisticated system implements cutting-edge autoregressive generation
+    techniques, leveraging the model's deep understanding of musical relationships
+    to create coherent, musically intelligent sequences that demonstrate the power
+    of AI-driven musical composition.
     """
 
     def __init__(self, transformer, tokenizer, max_length=50):

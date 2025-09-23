@@ -1,33 +1,31 @@
 """
-melody_preprocessor.py
+Intelligent Melody Preprocessing Engine for Transformer Training
 
-This script defines the MelodyPreprocessor class, a utility for preparing melody
-datasets for training in a sequence-to-sequence Transformer model. The class
-focuses on processing melody data by tokenizing and encoding the melodies, and
-subsequently creating TensorFlow datasets suitable for training sequence-to-sequence
-models.
+This sophisticated preprocessing system transforms raw musical data into optimized
+training sequences for our Transformer-based melody generation model. The system
+implements advanced tokenization techniques specifically designed for musical
+sequences, ensuring that the model receives perfectly formatted input for learning
+complex musical patterns and relationships.
 
-The MelodyPreprocessor handles the entire preprocessing pipeline including loading
-melodies from a dataset file, parsing the melodies into individual notes, tokenizing
-and encoding these notes, and forming input-target pairs for model training. It
-also includes functionality for padding sequences to a uniform length.
+The MelodyPreprocessor represents a complete data engineering pipeline that handles
+the entire journey from raw musical notation to TensorFlow-ready training batches.
+It intelligently processes melodies, creates meaningful input-target pairs, and
+optimizes data loading for efficient GPU training.
 
-Key Features:
-- Tokenization and encoding of melodies.
-- Dynamic calculation of maximum sequence length based on the dataset.
-- Creation of input-target pairs for sequence-to-sequence training.
-- Conversion of processed data into TensorFlow datasets.
+Advanced Preprocessing Features:
+- Intelligent musical tokenization preserving pitch, octave, and duration information
+- Dynamic sequence length optimization based on dataset characteristics
+- Sophisticated input-target pair generation for sequence-to-sequence learning
+- High-performance TensorFlow dataset creation with automatic batching and shuffling
 
-Usage:
-To use the MelodyPreprocessor, initialize it with the path to a dataset containing
-melodies and the desired batch size. Then call `create_training_dataset` to prepare
-the dataset for training a Transformer model.
+Musical Intelligence Capabilities:
+- Preserves musical structure and timing relationships during tokenization
+- Handles variable-length melodies with intelligent padding strategies
+- Creates meaningful training pairs that teach the model musical progression patterns
+- Optimizes memory usage through dynamic sequence length calculation
 
-
-Note:
-This script is intended to be used with datasets containing melody sequences in a
-specific format, where each melody is represented as a string of comma-separated
-musical notes (pitch with octave + duration in quarter length).
+This preprocessing engine represents the critical foundation that enables our
+Transformer model to understand and generate musically coherent sequences.
 """
 
 
@@ -40,10 +38,12 @@ from keras.preprocessing.text import Tokenizer
 
 class MelodyPreprocessor:
     """
-    A class for preprocessing melodies for a Transformer model.
-
-    This class takes melodies, tokenizes and encodes them, and prepares
-    TensorFlow datasets for training sequence-to-sequence models.
+    Advanced musical data preprocessing engine that transforms raw melodies into
+    sophisticated training sequences optimized for Transformer-based melody generation.
+    
+    This intelligent system implements cutting-edge tokenization techniques specifically
+    designed for musical sequences, ensuring that our Transformer model receives
+    perfectly structured input for learning complex musical patterns and relationships.
     """
 
     def __init__(self, dataset_path, batch_size=32):

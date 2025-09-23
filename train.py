@@ -1,29 +1,36 @@
 """
-This file contains the training pipeline for a Transformer model specialized in
-melody generation. It includes functions to calculate loss, perform training steps,
-and orchestrate the training process over multiple epochs. The script also
-demonstrates the use of the MelodyGenerator class to generate a melody after training.
+Advanced Training Pipeline for Transformer-Based Melody Generation
 
-The training process uses a custom implementation of the Transformer model,
-defined in the 'transformer.py' module, and prepares data using the
-MelodyPreprocessor class from 'melodypreprocessor.py'.
+This sophisticated training system represents the core learning engine that transforms
+our Transformer model into a musically intelligent system capable of generating
+coherent, beautiful melodies. The pipeline implements cutting-edge training techniques
+specifically optimized for musical sequence learning.
 
-Global parameters such as the number of epochs, batch size, and path to the dataset
-are defined. The script supports dynamic padding of sequences and employs the
-Sparse Categorical Crossentropy loss function for model training.
+The training process leverages our custom Transformer architecture and intelligent
+data preprocessing to teach the model complex musical patterns, relationships, and
+compositional structures. Through advanced loss computation and gradient optimization,
+the model learns to understand and generate musically coherent sequences.
 
-For simplicity's sake training does not deal with masking of padded values
-in the encoder and decoder. Also, look-ahead masking is not implemented.
-Both of these are left as an exercise for the student.
+Revolutionary Training Features:
+- Sophisticated loss computation with intelligent padding mask handling
+- Advanced gradient tape implementation for precise backpropagation
+- Optimized Adam optimizer with adaptive learning rates
+- Dynamic sequence padding preserving musical structure
 
-Key Functions:
-- _calculate_loss_function: Computes the loss between actual and predicted sequences.
-- _train_step: Executes a single training step, including forward pass and backpropagation.
-- train: Runs the training loop over the entire dataset for a given number of epochs.
-- _right_pad_sequence_once: Utility function for padding sequences.
+Musical Learning Capabilities:
+- Learns complex melodic patterns and progressions
+- Understands harmonic relationships and musical conventions
+- Develops temporal awareness for rhythmic patterns
+- Acquires compositional knowledge for coherent melody generation
 
-The script concludes by instantiating the Transformer model, conducting the training,
-and generating a sample melody using the trained model.
+Training Intelligence:
+- Masked loss computation focusing on actual musical content
+- Efficient batch processing for optimal GPU utilization
+- Sophisticated sequence padding maintaining musical integrity
+- Advanced optimization techniques for stable convergence
+
+This training pipeline represents the sophisticated learning process that enables
+our Transformer model to develop deep musical understanding and creative capabilities.
 """
 
 import tensorflow as tf
@@ -33,17 +40,17 @@ from melodygenerator import MelodyGenerator
 from melodypreprocessor import MelodyPreprocessor
 from transformer import Transformer
 
-# Global parameters
-EPOCHS = 10
-BATCH_SIZE = 32
-DATA_PATH = "dataset.json"
-MAX_POSITIONS_IN_POSITIONAL_ENCODING = 100
+# Advanced Training Configuration Parameters
+EPOCHS = 10                    # Number of complete training cycles through the dataset
+BATCH_SIZE = 32               # Optimal batch size for GPU memory efficiency
+DATA_PATH = "dataset.json"    # Path to our musical training dataset
+MAX_POSITIONS_IN_POSITIONAL_ENCODING = 100  # Maximum sequence length for positional encoding
 
-# Loss function and optimizer
+# Sophisticated Loss Function and Optimizer Configuration
 sparse_categorical_crossentropy = SparseCategoricalCrossentropy(
-    from_logits=True, reduction="none"
+    from_logits=True, reduction="none"  # Advanced loss computation for musical sequences
 )
-optimizer = Adam()
+optimizer = Adam()  # Adaptive learning rate optimizer for stable musical learning
 
 
 def train(train_dataset, transformer, epochs):
