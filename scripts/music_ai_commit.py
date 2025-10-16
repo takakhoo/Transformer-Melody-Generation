@@ -39,4 +39,8 @@ heartbeat.write_text(
 Path(".github").mkdir(parents=True, exist_ok=True)
 Path(".github/music_ai_message.txt").write_text(msg + "\n")
 
+# Write a complete commit message that the workflow will use
+commit_message = f"MusicAI: {msg} — {stamp}"
+Path(".github/commit_message.txt").write_text(commit_message + "\n")
+
 
