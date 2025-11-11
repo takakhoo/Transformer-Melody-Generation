@@ -1,5 +1,5 @@
 # Music AI Heartbeat
 
-- Time: 2025-11-11 01:18:46 UTC
-- Message: Transformers learn long-range musical dependencies via attention.
-- Build: 917c65db
+- Time: 2025-11-11 12:35:42 UTC
+- Message: Sinusoidal positional encodings preserve rhythmic structure.
+- Build: 4c3b4e15
