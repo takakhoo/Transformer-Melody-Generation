@@ -1,1 +1,1 @@
-MusicAI: Autoregressive decoding enables iterative melody generation. — 2026-01-11 01:42:00 UTC
+MusicAI: Masking focuses loss on musical content, not padding. — 2026-01-11 12:35:28 UTC
