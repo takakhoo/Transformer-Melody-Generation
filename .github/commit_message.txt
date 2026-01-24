@@ -1,1 +1,1 @@
-MusicAI: Data augmentation improves generalization across styles. — 2026-01-24 01:23:10 UTC
+MusicAI: Curriculum learning can stabilize sequence training. — 2026-01-24 12:35:25 UTC
