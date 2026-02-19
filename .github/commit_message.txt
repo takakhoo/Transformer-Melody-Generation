@@ -1,1 +1,1 @@
-MusicAI: Transformers learn long-range musical dependencies via attention. — 2026-02-19 01:55:53 UTC
+MusicAI: Sinusoidal positional encodings preserve rhythmic structure. — 2026-02-19 12:58:51 UTC
