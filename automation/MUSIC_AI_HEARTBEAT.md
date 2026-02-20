@@ -1,5 +1,5 @@
 # Music AI Heartbeat
 
-- Time: 2026-02-20 01:51:44 UTC
-- Message: Autoregressive decoding enables iterative melody generation.
-- Build: ce88ce09
+- Time: 2026-02-20 12:52:42 UTC
+- Message: Masking focuses loss on musical content, not padding.
+- Build: 6f8daad9
