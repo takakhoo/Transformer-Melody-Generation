@@ -1,5 +1,5 @@
 # Music AI Heartbeat
 
-- Time: 2026-03-27 12:59:23 UTC
-- Message: Masking focuses loss on musical content, not padding.
-- Build: cf2a1a6b
+- Time: 2026-03-28 01:55:34 UTC
+- Message: Multi-head attention models harmonic and rhythmic relationships.
+- Build: 10287612
