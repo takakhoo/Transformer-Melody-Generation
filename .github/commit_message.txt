@@ -1,1 +1,1 @@
-MusicAI: Masking focuses loss on musical content, not padding. — 2026-04-06 13:03:25 UTC
+MusicAI: Multi-head attention models harmonic and rhythmic relationships. — 2026-04-07 02:05:58 UTC
