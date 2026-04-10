@@ -1,1 +1,1 @@
-MusicAI: Curriculum learning can stabilize sequence training. — 2026-04-09 13:20:25 UTC
+MusicAI: Transformers learn long-range musical dependencies via attention. — 2026-04-10 02:11:31 UTC
