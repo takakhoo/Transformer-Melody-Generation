@@ -1,1 +1,1 @@
-MusicAI: Sinusoidal positional encodings preserve rhythmic structure. — 2026-04-15 13:18:27 UTC
+MusicAI: Autoregressive decoding enables iterative melody generation. — 2026-04-16 02:25:31 UTC
