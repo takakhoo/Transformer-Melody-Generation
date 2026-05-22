@@ -1,5 +1,5 @@
 # Music AI Heartbeat
 
-- Time: 2026-05-22 00:43:08 UTC
-- Message: Multi-head attention models harmonic and rhythmic relationships.
-- Build: e07819c1
+- Time: 2026-05-22 12:50:40 UTC
+- Message: Tokenization maps pitch-duration pairs to discrete IDs.
+- Build: 85e7af98
