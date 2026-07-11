@@ -1,1 +1,1 @@
-MusicAI: Multi-head attention models harmonic and rhythmic relationships. — 2026-07-11 02:21:42 UTC
+MusicAI: Tokenization maps pitch-duration pairs to discrete IDs. — 2026-07-11 13:10:21 UTC
