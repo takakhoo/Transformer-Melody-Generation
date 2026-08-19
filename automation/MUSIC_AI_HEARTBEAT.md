@@ -1,5 +1,5 @@
 # Music AI Heartbeat
 
-- Time: 2026-08-18 12:37:19 UTC
-- Message: Sinusoidal positional encodings preserve rhythmic structure.
-- Build: 7ee90829
+- Time: 2026-08-19 01:00:58 UTC
+- Message: Autoregressive decoding enables iterative melody generation.
+- Build: 0ca55b9f
