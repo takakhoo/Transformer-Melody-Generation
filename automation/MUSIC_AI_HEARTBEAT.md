@@ -1,5 +1,5 @@
 # Music AI Heartbeat
 
-- Time: 2026-08-22 12:30:51 UTC
-- Message: Curriculum learning can stabilize sequence training.
-- Build: 748ba587
+- Time: 2026-08-23 01:05:32 UTC
+- Message: Transformers learn long-range musical dependencies via attention.
+- Build: 9a0ae1e3
